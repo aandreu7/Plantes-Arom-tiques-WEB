@@ -19,7 +19,7 @@
 
         if ($resultat)
         {
-            include_once __DIR__.'/controlador_buidar_carrito.php'; // ELS CONTROLADORS ES PODEN CRIDAR ENTRE ELLS?
+            include_once __DIR__.'/../helpers/helper_buidar_carrito.php';
             echo 1; // HO REB EL JS
         }
     }

@@ -12,6 +12,10 @@
             <?php require __DIR__.'/controladors/controlador_menu_superior.php'; ?>
         </header>
 
+        <div id="container_resum_carrito">
+            <?php require __DIR__.'/controladors/controlador_resum_carrito.php'; ?>
+        </div>
+
         <div>
             <?php require __DIR__.'/controladors/controlador_perfil.php'; ?>
         </div>

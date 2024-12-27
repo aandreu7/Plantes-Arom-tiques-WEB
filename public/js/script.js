@@ -42,6 +42,14 @@ async function treureProducteCarrito(nomProducte)
     document.getElementById("container_veure_carrito").innerHTML = dataText;
 }
 
+async function buidarCarrito() {
+    const resposta = await fetch("../helpers/helper_buidar_carrito.php");
+    if (resposta.ok)
+        window.location.href = "index.php?accio=veure_carrito";
+    else
+        alert('Error buidant el carrito :(');
+}
+
 async function finalitzarCompra()
 {
     let resposta = await fetch("../controladors/controlador_desar_comanda.php");
