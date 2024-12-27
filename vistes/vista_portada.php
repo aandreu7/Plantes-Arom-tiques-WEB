@@ -1,8 +1,3 @@
-<?php
-    echo "VAR DUMP DE vista_portada.php";
-    var_dump($_SESSION);
-    var_dump($_FILES);
-?>
 <body>
     <header id="header_portada">
         <h1>Benvingut al món de les plantes aromàtiques</h1>
@@ -29,7 +24,7 @@
         </section>
 
         <section id="quotes" style="grid-area: cites_famoses">
-            <h2>Citas Famosas sobre Plantas</h2>
+            <h2>Cites Famoses sobre Plantes</h2>
             <blockquote>
                 <p>"Las flores son el canto de la tierra." - **Anónimo**</p>
             </blockquote>
@@ -42,9 +37,13 @@
         </section>
 
 
-        <section id="paypal" style="grid-area: paypal">
-            <a href="https://www.paypal.com/es/home">
-                <h2>Recolza el nostre proyecte</h2>
+        <section id="xarxes" style="grid-area: xarxes">
+            <h2> Ens pots trobar a... </h2>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="../images/ig.jpg" widht=200>
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+                <img src="../images/x.png" widht=200>
             </a>
         </section>
 

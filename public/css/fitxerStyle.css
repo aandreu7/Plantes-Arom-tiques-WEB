@@ -9,7 +9,39 @@
     margin-bottom: 10px;
 }
 
+#xarxes {
+    text-align: center;
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #60e194;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
+#xarxes h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#xarxes a {
+    margin: 0 20px;
+    display: inline-block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#xarxes a:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+#xarxes img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
 
 #grid_portada{
     background-color: lightgreen;
@@ -21,7 +53,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: 
         'mes_populars mes_populars cites_famoses cites_famoses'
-        'mes_populars mes_populars paypal paypal';
+        'mes_populars mes_populars xarxes xarxes';
 }
 
 #grid_portada img {
@@ -521,6 +553,84 @@
     color: #ffc107;
     font-weight: bold;
 }
+
+/* !!!!!!!!!!!!! LLISTAT DE COMANDES !!!!!!!!!!!! */
+
+#llistat_comandes {
+    font-family: Arial, sans-serif;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#llistat_comandes h1 {
+    text-align: center;
+    color: #098f24;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#llistat_comandes h2 {
+    color: #47ab61;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid #91f2cb;
+    padding-bottom: 0.3rem;
+}
+
+#llistat_comandes ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#llistat_comandes li {
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#llistat_comandes li strong {
+    color: #333;
+    font-weight: bold;
+}
+
+#llistat_comandes h3 {
+    text-align: center;
+    color: #999;
+    font-size: 1rem;
+}
+
+#llistat_comandes li .comandaData, #llistat_comandes li .comandaCostTotal {
+    font-size: 1.2rem;
+    color: #1d5f2f;
+    font-weight: bold;
+}
+
+
+#llistat_comandes img {
+    display: block;
+    margin: 10px auto;
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#llistat_comandes p {
+    text-align: center;
+    color: #10cc4c;
+    font-size: 1rem;
+}
+
 
 /* !!!!!!!!!!!!! PERFIL !!!!!!!!!!!! */
 #perfil {

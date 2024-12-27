@@ -8,7 +8,8 @@
 
     $accio = $_GET['accio'] ?? NULL;
 
-    $filesAbsolutePath = '/home/TDIW/tdiw-m5/public_html/uploadedFiles/';
+    if (!isset($filesAbsolutePath))
+        $filesAbsolutePath = 'uploadedUserFiles/';
 
     switch ($accio)
     {
@@ -35,6 +36,9 @@
             break;
         case "actualitzar_perfil":
             require __DIR__.'/resource_actualitzar_perfil.php';
+            break;
+        case "llistar_comandes":
+            require __DIR__.'/resource_llistar_comandes.php';
             break;
         default:
             require __DIR__.'/resource_portada.php';
