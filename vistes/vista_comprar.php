@@ -1,0 +1,1 @@
+<p> S'ha afegit correctament el producte i la quantitat al carrito. </p>
