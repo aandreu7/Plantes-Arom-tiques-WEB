@@ -10,7 +10,8 @@
 
             $total = 0;
 
-            foreach ($cart as $producte => $detall) {
+            foreach ($cart as $producte => $detall) 
+            {
                 $quantitat = $detall['quantitat'];
                 $preuProducte = $detall['preuProducte'];
                 $preuUnitari = $preuProducte / $quantitat;
@@ -20,7 +21,7 @@
                 echo "<tr>";
                 echo "<td>" . htmlspecialchars($producte) . "</td>";
                 echo "<td>
-                        <form id='form-modificar' action='../helpers/helper_modificar_quantitat.php' method='POST'>
+                        <form id='form-modificar' action='../controladors/controlador_modificar_quantitat.php' method='POST'>
                             <input type='number' id='quantitat' name='quantitat' value='$quantitat' min='1'/>
                             <input type='hidden' name='producte' value='$producte' />
                             <button type='submit' class='btn-modificar'>Modificar</button>

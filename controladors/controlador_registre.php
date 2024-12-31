@@ -14,7 +14,7 @@
 
     else // JA S'HA ENVIAT EL FORMULARI
     {
-        include __DIR__.'/../helpers/helper_validar_dades_server_side.php'; // FUNCIÓ AUXILIAR
+        include __DIR__.'/../models/model_validar_dades_server_side.php'; // FUNCIÓ AUXILIAR
 
         include __DIR__.'/../models/model_connectaBD.php';
         include __DIR__.'/../models/model_consultaUsuari.php';

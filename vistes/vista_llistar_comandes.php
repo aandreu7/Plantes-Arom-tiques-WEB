@@ -17,6 +17,8 @@
                     <li>
                         <strong>Línia ID:</strong> <?php echo htmlspecialchars($linia['lc_id'], ENT_QUOTES, 'UTF-8'); ?><br>
                         <strong>Quantitat:</strong> <?php echo htmlspecialchars($linia['lc_quantitat'], ENT_QUOTES, 'UTF-8'); ?><br>
+                        <strong>Preu Unitari:</strong> <?php echo htmlspecialchars($linia['lc_preuunitari'], ENT_QUOTES, 'UTF-8'); ?>€<br>
+                        <strong>Preu Total Producte:</strong> <?php echo htmlspecialchars($linia['lc_preutotal'], ENT_QUOTES, 'UTF-8'); ?>€<br>
                         <strong>Producte:</strong> <?php echo htmlspecialchars($linia['producte_nom'], ENT_QUOTES, 'UTF-8'); ?><br>
                         <img 
                             src="<?php echo htmlspecialchars($linia['producte_imatge'], ENT_QUOTES, 'UTF-8'); ?>" 

@@ -19,7 +19,7 @@
 
         if ($resultat)
         {
-            include_once __DIR__.'/../helpers/helper_buidar_carrito.php';
+            include_once __DIR__.'/../models/model_buidar_carrito.php';
             echo 1; // HO REB EL JS
         }
     }

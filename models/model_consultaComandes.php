@@ -7,6 +7,8 @@ function getComandes($conn, $idUser): array
                comanda.comanda_data,
                linia_comanda.lc_id,
                linia_comanda.lc_quantitat,
+               linia_comanda.lc_preuunitari,
+               linia_comanda.lc_preutotal,
                linia_comanda.producte_id,
                producte.producte_nom,
                producte.producte_imatge
