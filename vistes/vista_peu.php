@@ -1,5 +1,7 @@
-<section id="footer_section">
-    <img src="../images/planta_logo.png" width="100px" />
+<img src="../images/planta_logo.png" width="100px" />
+<div class="contact-info">
     <p>&copy;Plantes Aromàtiques</p>
-</section>
-
+    <p>Atenció al client:</p>
+    <p>612 172 364</p>
+    <p>assistencia@plantesaromatiques.cat</p>
+</div>

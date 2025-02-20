@@ -1,4 +1,7 @@
 <?php
+
+    // AQUEST CONTROLADOR ES CRIDA AMB AJAX DES DE LA FUNCIÓ finalitzarCompra() DEL fitxer vistes/js/carrito.js
+
     if (session_status() != PHP_SESSION_ACTIVE) // CAL FER SESSION_START JA QUE AQUEST CONTROLADOR ES CRIDA AMB AJAX, 
         session_start();                        // I NO RECORDA LA SESSION QUE S'INICIA A L'INDEX
 
@@ -17,10 +20,13 @@
 
         $resultat = desarComanda($conn, $cart, $total, $_SESSION["id"]);
 
+        $_SESSION["infoCartPostCompra"] = $_SESSION["cart"]; // ES GUARDA FORA DEL CARRITO PER 
+                                                                // PODER MOSTRAR LA COMANDA REALITZADA I BUIDAR EL CARRITO ALHORA
+
         if ($resultat)
         {
             include_once __DIR__.'/../models/model_buidar_carrito.php';
-            echo 1; // HO REB EL JS
+            echo 1; // HO REB LA FUNCIÓ JS
         }
     }
 ?>

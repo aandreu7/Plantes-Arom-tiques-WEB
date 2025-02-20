@@ -1,6 +1,6 @@
 <html lang="ca">
     <head>
-        <title>Iniciar sessió - Plantes Aromàtiques</title>
+        <title>Buscar producte - Plantes Aromàtiques</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./public/css/fitxerStyle.css?v=2">
         <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
@@ -9,7 +9,6 @@
     </head>
 
     <body>
-
         <header>
             <?php require __DIR__.'/controladors/controlador_menu_superior.php'; ?>
         </header>
@@ -19,13 +18,11 @@
         </div>
 
         <div>
-            <?php require __DIR__.'/controladors/controlador_inici_sessio.php'; ?>
+            <?php require __DIR__.'/controladors/controlador_buscar_producte.php'; ?>
         </div>
 
         <footer>
             <?php require __DIR__.'/controladors/controlador_peu.php'; ?>
         </footer>
-
-
     </body>
 </html>

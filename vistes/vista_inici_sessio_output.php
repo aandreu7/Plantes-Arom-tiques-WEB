@@ -7,5 +7,6 @@
     <?php else: ?> <!-- $registreCorrecte == -3 -->
         <p class="error">Error a la base de dades i/o error extraordinari. Prova-ho un altre cop.</p>
     <?php endif; ?>
+    <p>Fes <a href="index.php?accio=inici_sessio">click aquí </a>per tornar-ho a provar.</p>
 </section>
 

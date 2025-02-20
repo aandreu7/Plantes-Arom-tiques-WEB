@@ -8,7 +8,7 @@
 
     if ($_SERVER["REQUEST_METHOD"]=="POST") // CONFIRMEM QUE S'HA ENVIAT EL FORMULARI
     {
-        include __DIR__.'/../models/model_validar_dades_server_side.php'; // FUNCIÓ AUXILIAR
+        include __DIR__.'/../models/model_validar_dades_server_side.php'; // FUNCIÓ PER VALIDAR DADES
 
         include __DIR__.'/../models/model_connectaBD.php';
         include __DIR__.'/../models/model_actualitzar_perfil.php';
@@ -16,12 +16,13 @@
         $errors_actualitzar_perfil = ["name" => "", "email" => "", "password" => "", "address" => "", "population" => "", "postal" => ""];
         $actualitzarCorrecte = validar_dades_server_side($errors_actualitzar_perfil);
 
+        // EN EL SEGÜENT BLOC DE CODI ES PREPARA LA RUTA ON ES GUARDARÀ LA IMATGE
         if ($actualitzarCorrecte != 2 && isset($_FILES['profile_image']) && !empty($_FILES['profile_image']['name'])) 
         {
             $fileExtension = pathinfo($_FILES['profile_image']['name'], PATHINFO_EXTENSION);
             $safeFileName = $_SESSION["id"] . '.' . $fileExtension;
             $safeFileName = preg_replace('/[^a-zA-Z0-9._-]/', '', $safeFileName);
-            $destinationPath = $filesAbsolutePath . $safeFileName;
+            $destinationPath = $filesPath . $safeFileName;
         
             if (move_uploaded_file($_FILES["profile_image"]["tmp_name"], $destinationPath))
                 $fileAbsolutePath = $destinationPath;

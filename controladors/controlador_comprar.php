@@ -2,10 +2,16 @@
     if (session_status() != PHP_SESSION_ACTIVE) // CAL FER SESSION_START JA QUE AQUEST CONTROLADOR ES CRIDA AMB AJAX, 
         session_start();                        // I NO RECORDA LA SESSION QUE S'INICIA A L'INDEX
     
-    $idProducte = $_GET["idProducte"];
-    $nomProducte = $_GET["nomProducte"];
-    $quantitat = (int)$_GET["quantitat"];
-    $preuUnitat = (float)$_GET["preuUnitat"];
+    $idProducte = isset($_GET["idProducte"]) ? $_GET["idProducte"] : null;
+    $nomProducte = isset($_GET["nomProducte"]) ? $_GET["nomProducte"] : null;
+    $quantitat = isset($_GET["quantitat"]) ? (int)$_GET["quantitat"] : null;
+    $preuUnitat = isset($_GET["preuUnitat"]) ? (float)$_GET["preuUnitat"] : null;
+
+    // VALIDACIÓ SERVER-SIDE
+    if (empty($idProducte) || empty($nomProducte) || $quantitat <= 0 || $preuUnitat <= 0) 
+    {
+        exit();
+    }
 
     if (!isset($_SESSION["cart"]))
         $_SESSION["cart"] = [];

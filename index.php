@@ -1,6 +1,5 @@
 <?php
 
-    // ÉS CORRECTE INICIAR LA SESSIÓ AIXÍ?
     session_start();
 
     if (!isset($_SESSION["logued"]))
@@ -8,8 +7,8 @@
 
     $accio = $_GET['accio'] ?? NULL;
 
-    if (!isset($filesAbsolutePath))
-        $filesAbsolutePath = 'uploadedUserFiles/';
+    if (!isset($filesPath))
+        $filesPath = 'uploadedUserFiles/';
 
     switch ($accio)
     {
@@ -39,6 +38,9 @@
             break;
         case "llistar_comandes":
             require __DIR__.'/resource_llistar_comandes.php';
+            break;
+        case "buscar_producte":
+            require __DIR__.'/resource_buscar_producte.php';
             break;
         default:
             require __DIR__.'/resource_portada.php';

@@ -22,3 +22,18 @@
             <button type="submit">Endavant!</button>
         </form>
 </section>
+
+<script>
+    // AQUESTA FUNCIÓ VALIDA EL CAMP "email" DEL FORMULARI DE REGISTRE
+    // DINTRE DE LES VISTES ES PERMET JAVASCRIPT
+    document.getElementById('registre').addEventListener('submit', function(event) 
+    {
+        var email = document.getElementById('email');
+        var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        
+        if (!emailPattern.test(email.value)) {
+            alert("L'adreça electrònica no és vàlida.");
+            event.preventDefault();
+        }
+    });
+</script>

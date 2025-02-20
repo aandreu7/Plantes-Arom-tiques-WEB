@@ -1,8 +1,31 @@
 <section id="carritoCompra">
     <?php
-        if (empty($cart)) {
-            echo "<h3>No tens productes al teu carro.</h3>";
-        } else {
+        if (empty($cart)) 
+        { ?>
+            <h3>No tens productes al teu cabàs. Et donem un parell de suggeriments...</h3>
+            <section id="suggeriments">
+                <div class="suggeriment">
+                    <img src="../images/equinacea.webp" alt="Equinàcia">
+                    <h2>Equinàcia</h2>
+                </div>
+                <div class="suggeriment">
+                    <img src="../images/geranio.webp" alt="Gerani">
+                    <h2>Gerani</h2>
+                </div>
+                <div class="suggeriment">
+                    <img src="../images/aloevera.webp" alt="Àloe Vera">
+                    <h2>Àloe Vera</h2>
+                </div>
+                <div class="suggeriment">
+                    <img src="../images/hibisco.webp" alt="Híbisc">
+                    <h2>Híbisc</h2>
+                </div>
+            </section>
+            <a href="index.php?accio=categories"><h3>Explora el nostre catàleg!</h3></a>
+        <?php
+        } 
+        else 
+        {
             echo "<h3>Carrito de la compra</h3>";
             echo "<div id='tablaCarrito'>";
             echo "<table border='1'>";
@@ -40,12 +63,10 @@
 
             echo "<br><button class='btn-buidar' onclick='buidarCarrito()'>Buidar carrito</button>";
 
-            // Verifica si el usuario está logueado para mostrar el botón de finalizar compra
-            if (isset($_SESSION["logued"]) && $_SESSION["logued"] == true) {
-                echo "<br><button class='btn-finalitzar' onclick='finalitzarCompra()'>Finalitzar Compra</button>";
-            } else {
+            if (isset($_SESSION["logued"]) && $_SESSION["logued"] == true)
+                echo "<br><button id='buttonFinalitzarCompra' class='btn-finalitzar' onclick='finalitzarCompra()'>Finalitzar Compra</button>"; 
+            else
                 echo "<a href='../index.php?accio=inici_sessio'><p>Inicia sessió per finalitzar la compra.</p></a>";
-            }
         }
     ?>
 </section>

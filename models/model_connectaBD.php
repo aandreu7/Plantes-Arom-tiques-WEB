@@ -1,6 +1,6 @@
 <?php
 
-    function getConn() // POSAR-HO ALS CONTROLADOS
+    function getConn()
     {
         $host = "127.0.0.1"; $dbname = "tdiw-m5"; $user = "tdiw-m5"; $password = "TLWFawJr";
 

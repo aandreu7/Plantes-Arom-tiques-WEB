@@ -14,7 +14,7 @@
 
     else // JA S'HA ENVIAT EL FORMULARI
     {
-        include __DIR__.'/../models/model_validar_dades_server_side.php'; // FUNCIÓ AUXILIAR
+        include __DIR__.'/../models/model_validar_dades_server_side.php'; // FUNCIÓ PER VALIDAR DADES
 
         include __DIR__.'/../models/model_connectaBD.php';
         include __DIR__.'/../models/model_consultaUsuari.php';
@@ -37,7 +37,7 @@
                 $_SESSION["address"] = $_POST["address"];
                 $_SESSION["population"] = $_POST["population"];
                 $_SESSION["postal"] = $_POST["postal"];
-                $_SESSION["picture"] = "/images/usuario_default.webp"; // NO ES POT INSERIR UNA IMATGE DURANT EL REGISTRE, PER TANT, AFEGIM LA DE PER DEFECTE
+                $_SESSION["picture"] = "/images/usuario_default.webp"; // NO ES POT INSERIR UNA IMATGE DURANT EL REGISTRE, PER TANT, AFEGIM LA DE 'PER DEFECTE'
 
                 header("Location: ../index.php");
                 exit();

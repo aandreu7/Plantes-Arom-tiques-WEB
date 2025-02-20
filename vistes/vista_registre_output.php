@@ -17,4 +17,7 @@
     <?php else: ?> <!-- $registreCorrecte == -3 -->
         <p class="error">Error a la base de dades i/o error extraordinari. Prova-ho un altre cop.</p>
     <?php endif; ?>
+    <?php if ($registreCorrecte != 1): ?>
+        <p>Fes <a href="index.php?accio=registre">click aquí </a>per tornar-ho a provar.</p>
+    <?php endif; ?>
 </section>
