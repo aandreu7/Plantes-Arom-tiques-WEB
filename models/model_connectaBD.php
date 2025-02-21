@@ -2,7 +2,7 @@
 
     function getConn()
     {
-        $host = "ep-empty-mud-a9rrezv3-pooler.gwc.azure.neon.tech"; $dbname = "neondb"; $user = "neondb_owner"; $password = "npg_8LejhKs2qotZ";
+        $host = getenv('host'); $dbname = getenv('dbname'); $user = getenv('user'); $password = getenv('password');
 
         $conn = pg_connect("host='$host' dbname='$dbname' user='$user' password='$password'");
 
