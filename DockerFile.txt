@@ -4,6 +4,8 @@ RUN apt-get update && apt-get install -y \
     libpq-dev \
     && docker-php-ext-install pdo pdo_pgsql pgsql  
 
+RUN mkdir -p /var/www/html/uploadedUserFiles && chmod 777 /var/www/html/uploadedUserFiles
+
 COPY php.ini /usr/local/etc/php/php.ini
 COPY . /var/www/html/
 
