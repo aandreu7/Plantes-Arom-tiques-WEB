@@ -1,4 +1,4 @@
-## ========================================== 🇪🇸 Español ==========================================
+## 🇪🇸 Español
 
 # 🛒 Tienda Virtual: Plantas aromáticas (https://plantas-aromaticas.onrender.com)
 
@@ -31,7 +31,7 @@ Esto se debe a que **el servicio de hosting utilizado no permite almacenamiento 
 
 En ningún momento hay que introducir datos de ninguna cuenta bancaria/tarjeta/Paypal u otros. Una vez el usuario confirma la comanda, simplemente se guarda en una base de datos. El pedido no llegará nunca ni tampoco se efectuará ningún cobro.
 
-## ========================================== 🇨🇦 Català ==========================================
+## 🇨🇦 Català
 
 # 🛒 Botiga Virtual: Plantes aromàtiques (https://plantas-aromaticas.onrender.com)
 
